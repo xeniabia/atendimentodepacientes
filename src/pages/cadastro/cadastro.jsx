@@ -1,5 +1,5 @@
-import FormCadastro from "../../components/formcadastro";
-import Tabela from "../../components/Tabela";
+import Form from "../../components/Form";
+import Table from "../../components/Table";
 
 function Cadastro() {
   return (
@@ -51,7 +51,7 @@ function Cadastro() {
                 <div className="col-md-12">
                   <div className="card">
                     <div className="card-body">
-                      <FormCadastro />
+                      <Form />
                     </div>
                   </div>
                 </div>
@@ -70,7 +70,7 @@ function Cadastro() {
 
           <div id="registration">
             <div className="card-body">
-            <Tabela/>
+            <Table/>
             </div>
           </div>
         </div>

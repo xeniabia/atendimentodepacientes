@@ -1,6 +1,5 @@
 
 const ArrayPacientes = [
-  [
     {
       id: "1ed2e2d9-9709-46e1-ab0d-729e8317269b",
       name: "Pedro",
@@ -22,7 +21,7 @@ const ArrayPacientes = [
       level: 3,
       status: 0,
     },
-  ]
+  
 ];
 
 export default ArrayPacientes;

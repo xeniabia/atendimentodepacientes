@@ -1,4 +1,4 @@
-function FormCadastro (){
+function Form (){
     return (
         <form id="patient-form">
         <div className="mb-3">
@@ -35,4 +35,4 @@ function FormCadastro (){
     )
 }
 
-export default FormCadastro;
+export default Form;
