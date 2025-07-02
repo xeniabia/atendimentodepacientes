@@ -1,6 +1,6 @@
 
 
-function Tabs ({title, subtitleUne, subtitleTwo, tabUne, tabTwo}) {
+function Tabs ({title, subtitleUne, subtitleTwo, tabUne, tabTwo, TabThree, Tab, nameTabThree }) {
     return (
       <>
         <div className="container mt-4">
@@ -35,6 +35,22 @@ function Tabs ({title, subtitleUne, subtitleTwo, tabUne, tabTwo}) {
                 {subtitleTwo}
               </button>
             </li>
+            {Tab == true ? (
+              <li className="nav-item" role="presentation">
+                <button
+                  className="nav-link"
+                  id="atendidos-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#atendidos"
+                  type="button"
+                  role="tab"
+                  aria-controls="atendidos"
+                  aria-selected="false"
+                >
+                  {nameTabThree}
+                </button>
+              </li>
+            ) : null}
           </ul>
 
           <div className="tab-content" id="medicalAreaTabsContent">
@@ -48,27 +64,42 @@ function Tabs ({title, subtitleUne, subtitleTwo, tabUne, tabTwo}) {
                 <div className="row">
                   <div className="col-md-12">
                     <div className="card">
-                      <div className="card-body">
-                        {tabUne}
-                      </div>
+                      <div className="card-body">{tabUne}</div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-
-          <div
-            className="tab-pane fade tab-content-area"
-            id="triagem"
-            role="tabpanel"
-            aria-labelledby="triagem-tab"
-          >
-            <h4 className="mb-3">Retire sua ficha</h4>
-
-            <div id="registration">
-              <div className="card-body">
-             {tabTwo}
+            <div
+              className="tab-pane fade tab-content-area"
+              id="triagem"
+              role="tabpanel"
+              aria-labelledby="triagem-tab"
+            >
+              <div id="screen-cadastro" className="screen container mt-4">
+                <div className="row">
+                  <div className="col-md-12">
+                    <div className="card">
+                      <div className="card-body">{tabTwo}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="tab-pane fade tab-content-area"
+              id="atendidos"
+              role="tabpanel"
+              aria-labelledby="atendidos-tab"
+            >
+              <div id="screen-cadastro" className="screen container mt-4">
+                <div className="row">
+                  <div className="col-md-12">
+                    <div className="card">
+                      <div className="card-body">{TabThree}</div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
