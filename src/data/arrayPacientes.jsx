@@ -20,14 +20,14 @@ const ArrayPacientes = [
     level: 3,
     status: 0,
   },
+  {
+    id: "58523a4b-30a2-4bb6-a4a8-8cea9480336a",
+    name: "Alice",
+    reason: "ALERGIA A CAMARÃO",
+    level: 0,
+    status: 0,
+  }
 ];
 
-const patients = ArrayPacientes;
 
-const sortedPatients = [...patients].sort((a, b) => {
-  if (b.status !== a.status) return b.status - a.status; 
-  return b.level - a.level; 
-});
-console.log("aaaa", sortedPatients);
-
-export default sortedPatients;
+export {ArrayPacientes};

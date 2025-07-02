@@ -1,7 +1,9 @@
 import Form from "../../components/Form";
 import Table from "../../components/Table";
-
+import SortedPatients from "../../components/orderTrige";
 function Cadastro() {
+ const filter = SortedPatients.filter((patient) => patient.level === 1 || patient.level === 2 || patient.level === 3)
+
   return (
     <>
       {" "}
@@ -70,7 +72,7 @@ function Cadastro() {
 
           <div id="registration">
             <div className="card-body">
-            <Table/>
+            <Table  patientes={filter} mensagem={"Nenhuma ficha de paciente"} tv={false}/>
             </div>
           </div>
         </div>

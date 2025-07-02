@@ -1,7 +1,7 @@
-import sortedPatients from "../../data/arrayPacientes";
+
 import LevelDot from "../levelDot";
 
-function Table ({Actions}) {
+function Table ({Actions, patientes, mensagem, tv}) {
   
     return (
       <table className="table table-hover table-striped">
@@ -10,12 +10,12 @@ function Table ({Actions}) {
             <th scope="col">Nome</th>
             <th scope="col">Nível</th>
             <th scope="col">Motivo</th>
-            <th scope="col">Ações</th>
+           {tv == false? <th scope="col">Ações</th>: ""}
           </tr>
         </thead>
         <tbody>
-          {sortedPatients.length > 0 ? (
-            sortedPatients.map((t) => (
+          {patientes.length > 0 ? (
+            patientes.map((t) => (
               <tr key={`paciente-${t.id}`}>
                 <td>{t.name}</td>
                 <td> <LevelDot patient={t.level}/> </td>
@@ -27,7 +27,7 @@ function Table ({Actions}) {
           ) : (
             <tr>
               <td colSpan="4" className="text-center">
-                Nenhum paciente cadastrado
+                {mensagem}
               </td>
             </tr>
           )}
