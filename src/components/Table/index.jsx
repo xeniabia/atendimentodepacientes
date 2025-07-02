@@ -1,4 +1,4 @@
-import ArrayPacientes from "../../data/arrayPacientes";
+import sortedPatients from "../../data/arrayPacientes";
 import LevelDot from "../levelDot";
 
 function Table ({Actions}) {
@@ -14,8 +14,8 @@ function Table ({Actions}) {
           </tr>
         </thead>
         <tbody>
-          {ArrayPacientes.length > 0 ? (
-            ArrayPacientes.map((t) => (
+          {sortedPatients.length > 0 ? (
+            sortedPatients.map((t) => (
               <tr key={`paciente-${t.id}`}>
                 <td>{t.name}</td>
                 <td> <LevelDot patient={t.level}/> </td>
