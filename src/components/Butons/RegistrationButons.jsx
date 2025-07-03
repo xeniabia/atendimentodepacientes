@@ -1,4 +1,5 @@
-function RegistrationButons() {
+function RegistrationButons({id}) {
+  console.log(id)
   return (
     <>
      

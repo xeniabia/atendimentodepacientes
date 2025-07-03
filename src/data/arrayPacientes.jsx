@@ -3,7 +3,7 @@ const ArrayPacientes = [
     id: "1ed2e2d9-9709-46e1-ab0d-729e8317269b",
     name: "Pedro",
     reason: "dor de barriga",
-    level: 1,
+    level: 0,
     status: 0,
   },
   {
@@ -17,7 +17,7 @@ const ArrayPacientes = [
     id: "58523a4b-30a2-4bb6-a4a8-8cea9480336c",
     name: "Alice",
     reason: "ALERGIA A CAMARÃO",
-    level: 0,
+    level: 3,
     status: 0,
   },
   {

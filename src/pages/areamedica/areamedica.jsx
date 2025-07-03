@@ -3,11 +3,12 @@ import TrigeButons from "../../components/Butons/TrigeButons";
 import Table from "../../components/Table";
 import Tabs from "../../components/Tabs";
 import SortedPatients from "../../components/orderTrige";
+
 function AreaMedica() {
   const filterTrige = SortedPatients.filter((patient) => patient.level === 0);
   const filterDoctor = SortedPatients.filter(
     (patient) =>
-      patient.level === 1 || patient.level === 2 || patient.level === 3
+      patient.level != 0 && patient.status != 2
   );
   const filterAttended = SortedPatients.filter(
     (patient) => patient.status === 2
@@ -15,7 +16,6 @@ function AreaMedica() {
 
   return (
     <>
-      {" "}
       <Tabs
         nameTabThree={"Atendidos"}
         Tab={true}
@@ -26,18 +26,22 @@ function AreaMedica() {
           <Table
             patientes={filterDoctor}
             mensagem={"Nenhum paciente em para atendimento"}
-            Actions={<DoctorButons />}
+            Actions={(id) => <DoctorButons id={id} />} 
           />
         }
         tabTwo={
           <Table
             patientes={filterTrige}
             mensagem={"Nenhum paciente em triagem"}
-            Actions={<TrigeButons />}
+            Actions={(id) => <TrigeButons id={id} />}
           />
         }
         TabThree={
-          <Table patientes={filterAttended} mensagem={"Nenhum já atendido"} />
+          <Table 
+            patientes={filterAttended} 
+            mensagem={"Nenhum já atendido"} 
+            Actions={() => null} 
+          />
         }
       />
     </>
@@ -45,3 +49,4 @@ function AreaMedica() {
 }
 
 export default AreaMedica;
+

@@ -18,10 +18,12 @@ function Table ({Actions, patientes, mensagem}) {
             patientes.map((t) => (
               <tr key={`paciente-${t.id}`}>
                 <td>{t.name}</td>
-                <td> <LevelDot patient={t.level}/> </td>
+                <td>
+                  {" "}
+                  <LevelDot patient={t.level} />{" "}
+                </td>
                 <td>{t.reason}</td>
-                <td>{Actions}</td>
-      
+                <td>{Actions(t.id)}</td>
               </tr>
             ))
           ) : (
