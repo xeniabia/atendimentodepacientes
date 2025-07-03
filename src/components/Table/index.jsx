@@ -1,7 +1,7 @@
 
 import LevelDot from "../levelDot";
 
-function Table ({Actions, patientes, mensagem, tv}) {
+function Table ({Actions, patientes, mensagem}) {
   
     return (
       <table className="table table-hover table-striped">
@@ -10,7 +10,7 @@ function Table ({Actions, patientes, mensagem, tv}) {
             <th scope="col">Nome</th>
             <th scope="col">Nível</th>
             <th scope="col">Motivo</th>
-           {tv == false? <th scope="col">Ações</th>: ""}
+            <th scope="col">Ações</th>
           </tr>
         </thead>
         <tbody>
