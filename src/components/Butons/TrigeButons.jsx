@@ -1,10 +1,10 @@
-import { ArrayPacientes } from "../../data/arrayPacientes";
-
-function TrigeButons({ id }) {
-  const handleClick = (level) => {
-    console.log(`Paciente ${id} alterado para o nível ${level}`);
-    // Aqui você pode adicionar a lógica para atualizar o nível do paciente
+function TrigeButons({ id, onUpdateLevel }) {
+  const handleClick = (newLevel) => {
+    console.log(`Paciente ${id} alterado para o nível ${newLevel}`);
+    // Chama a função passada pelo componente pai para atualizar o estado
+    onUpdateLevel(id, newLevel);
   };
+
   return (
     <>
       <button
@@ -31,4 +31,5 @@ function TrigeButons({ id }) {
     </>
   );
 }
+
 export default TrigeButons;
