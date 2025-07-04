@@ -31,13 +31,6 @@ function DoctorButons({ id, onUpdateStatus }) {
         Atender
       </button>
       <button
-        className="btn btn-info btn-sm me-1"
-        onClick={() => handleClick("solicitar_exame")}
-        type="button"
-      >
-        Solicitar Exame
-      </button>
-      <button
         className="btn btn-success btn-sm"
         onClick={() => handleClick("finalizar")}
         type="button"

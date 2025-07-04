@@ -1,9 +1,11 @@
 import Form from "../../components/Form";
 import Table from "../../components/Table";
 import Tabs from "../../components/Tabs";
-import SortedPatients from "../../components/orderTrige";
+import { usePatientesStates } from "../../context";
+import DoctorButons from "../../components/Butons/DoctorButons";
+import RegistrationButons from "../../components/Butons/RegistrationButons";
 function Cadastro() {
- const filter = SortedPatients.filter((patient) => patient.level === 1 || patient.level === 2 || patient.level === 3)
+  const { updatePatientStatus, filterDoctor } = usePatientesStates();
 
   return (
     <>
@@ -15,9 +17,12 @@ function Cadastro() {
         tabUne={<Form />}
         tabTwo={
           <Table
-            patientes={filter}
+            patientes={filterDoctor}
             mensagem={"Nenhuma ficha de paciente"}
             tv={false}
+            Actions={(id) => (
+              <RegistrationButons id={id} onUpdateStatus={updatePatientStatus}/>
+            )}
           />
         }
       />
