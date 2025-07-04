@@ -47,7 +47,6 @@ function AreaMedica() {
             Actions={(id) => (
               <RegistrationButons
               id={id}
-              onUpdateStatus={updatePatientStatus}
              />
             )}
           />
