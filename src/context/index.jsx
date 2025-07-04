@@ -1,7 +1,7 @@
 import { createContext, useContext, useState, useEffect} from "react";
-import { ArrayPacientes } from "../data/arrayPacientes";
+//import { ArrayPacientes } from "../data/arrayPacientes";
 
-// Cria o contexto
+
 const PatientesStatesContext = createContext();
 const LOCAL_STORAGE_KEY = "pacientesApp.pacientes";
 
@@ -15,7 +15,7 @@ export function PatientesStatesProvider({ children }) {
        return JSON.parse(storedPacientes);
      }
     
-     return ArrayPacientes;
+     return [];
    });
    pacientes.sort((a, b) => {
      if (b.status !== a.status) return b.status - a.status;
@@ -46,7 +46,7 @@ export function PatientesStatesProvider({ children }) {
      (patient) => patient.level != 0 && patient.status != 2
    );
    const filterAttended = pacientes.filter((patient) => patient.status === 2);
-
+  
   return (
     <PatientesStatesContext.Provider
       value={{
