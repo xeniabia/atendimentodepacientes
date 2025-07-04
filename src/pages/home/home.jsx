@@ -6,18 +6,11 @@ function Home() {
   const { filterDoctor } = usePatientesStates();
 
   return (
-    <section className="container align-items-center">
-      <div className="row align-items-center ">
-        <div className="col-3 px-6 text-center ">
-          <CardTV />
-        </div>
-        <div className="col-8 text-center">
-          <ListTV
-            patientes={filterDoctor}
-            mensagem={"Nenhum paciente em para atendimento"}
-          />
-        </div>
-      </div>
+    <section className="container align-items-center text-center">
+      <ListTV
+        patientes={filterDoctor}
+        mensagem={"Nenhum paciente em para atendimento"}
+      />
     </section>
   );
 }

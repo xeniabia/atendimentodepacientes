@@ -4,7 +4,7 @@ function LisTv({ patientes, mensagem }) {
 
   return (
     <>
-      <div className="card">
+      <div className="card mt-5">
         <div className="card-header">
           <h5 className="card-title fw-bold">Lista de espera </h5>{" "}
         </div>
@@ -12,13 +12,17 @@ function LisTv({ patientes, mensagem }) {
           <ul className="list-group list-group-flush">
             {patientes.map((patient) => (
               <li className="list-group-item" key={patient.id}>
-                {patient.name}
-                <LevelDot patient={patient.level} /> Estado:
-                {patient.id === proximoPaciente?.id
-                  ? " (Próximo)"
-                  : patient.status === 1
-                  ? " Em atendimento"
-                  : " Em fila"}
+                <h2>{patient.name}</h2>
+                <p>
+                  {" "}
+                  Nível:
+                  <LevelDot patient={patient.level} /> Estado:
+                  {patient.id === proximoPaciente?.id
+                    ? " (Próximo)"
+                    : patient.status === 1
+                    ? " Em atendimento"
+                    : " Em fila"}{" "}
+                </p>
               </li>
             ))}
           </ul>
