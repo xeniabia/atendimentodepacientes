@@ -4,7 +4,7 @@ import Tabs from "../../components/Tabs";
 import { usePatientesStates } from "../../context";
 import RegistrationButons from "../../components/Butons/RegistrationButons";
 function Cadastro() {
-  const { updatePatientStatus, filterDoctor } = usePatientesStates();
+  const { filterDoctor } = usePatientesStates();
 
   return (
     <>
@@ -22,7 +22,6 @@ function Cadastro() {
             Actions={(id) => (
               <RegistrationButons
                 id={id}
-                onUpdateStatus={updatePatientStatus}
               />
             )}
           />
