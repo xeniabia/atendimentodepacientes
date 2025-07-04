@@ -1,5 +1,6 @@
 import DoctorButons from "../../components/Butons/DoctorButons";
 import TrigeButons from "../../components/Butons/TrigeButons";
+import RegistrationButons from "../../components/Butons/RegistrationButons";
 import Table from "../../components/Table";
 import Tabs from "../../components/Tabs";
 import { usePatientesStates } from "../../context";
@@ -43,7 +44,12 @@ function AreaMedica() {
           <Table
             patientes={filterAttended}
             mensagem={"Nenhum já atendido"}
-            Actions={() => null}
+            Actions={(id) => (
+              <RegistrationButons
+              id={id}
+              onUpdateStatus={updatePatientStatus}
+             />
+            )}
           />
         }
       />

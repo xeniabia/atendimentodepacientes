@@ -1,7 +1,6 @@
 function TrigeButons({ id, onUpdateLevel }) {
   const handleClick = (newLevel) => {
     console.log(`Paciente ${id} alterado para o nível ${newLevel}`);
-    // Chama a função passada pelo componente pai para atualizar o estado
     onUpdateLevel(id, newLevel);
   };
 
