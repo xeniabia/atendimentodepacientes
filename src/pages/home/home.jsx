@@ -17,20 +17,32 @@ function Home() {
     }
   }, [foundNextPatient, foundTreatePatient]);
   
-
+ console.log("Pacientes em atendimento:", treatedPatient);
 
   return (
     <section className="container align-items-center">
       <div className="row align-items-center ">
         <div className="col-8 px-6 text-center ">
-          <CardTV patient={treatedPatient?.name} />
+          <CardTV
+            header={"Paciente(s) em atendimento"}
+            patient={treatedPatient?.name}
+            message={
+              !treatedPatient
+                ? "nenhum paciente em atendimento"
+                : ""
+            }
+          />
           <ListTV
             patientes={filterDoctor}
             mensagem={"Nenhum paciente em para atendimento"}
           />
         </div>
         <div className="col-3 text-center">
-          <CardTV patient={nextPatient?.name} />
+          <CardTV
+            header={!treatedPatient ? "Em chamado" : "Próximo paciente"}
+            patient={nextPatient?.name}
+            message={!treatedPatient ? "chamando" : "proximo"}
+          />
         </div>
       </div>
     </section>

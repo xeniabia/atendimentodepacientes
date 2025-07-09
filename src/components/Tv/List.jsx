@@ -19,7 +19,7 @@ function LisTv({ patientes, mensagem }) {
               )
               .map((patient) => (
                 <li className="list-group-item" key={patient.id}>
-                  <h2>{patient.name}</h2>
+                  <h5>{patient.name}</h5>
                   <p>
                     {" "}
                     Nível:
