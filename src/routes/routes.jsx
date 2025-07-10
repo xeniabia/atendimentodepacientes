@@ -8,8 +8,8 @@ import { PatientesStatesProvider } from "../context/index.jsx";
 function RoutesNav() {
   return (
     <BrowserRouter>
-      <Nav />
       <PatientesStatesProvider>
+        <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="areamedica" element={<AreaMedica />} />
