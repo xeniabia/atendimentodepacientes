@@ -20,18 +20,9 @@ function AreaMedica() {
         nameTabThree={"Atendidos"}
         Tab={true}
         title={"Área Médica"}
-        subtitleUne={"Atendimento"}
-        subtitleTwo={"Triagem"}
+        subtitleUne={"Triagem"}
+        subtitleTwo={"Atendimento"}
         tabUne={
-          <Table
-            patientes={filterDoctor}
-            mensagem={"Nenhum paciente em para atendimento"}
-            Actions={(id) => (
-              <DoctorButons id={id} onUpdateStatus={updatePatientStatus} />
-            )}
-          />
-        }
-        tabTwo={
           <Table
             patientes={filterTrige}
             mensagem={"Nenhum paciente em triagem"}
@@ -40,15 +31,20 @@ function AreaMedica() {
             )}
           />
         }
+        tabTwo={
+          <Table
+            patientes={filterDoctor}
+            mensagem={"Nenhum paciente em para atendimento"}
+            Actions={(id) => (
+              <DoctorButons id={id} onUpdateStatus={updatePatientStatus} />
+            )}
+          />
+        }
         TabThree={
           <Table
             patientes={filterAttended}
             mensagem={"Nenhum já atendido"}
-            Actions={(id) => (
-              <RegistrationButons
-              id={id}
-             />
-            )}
+            Actions={(id) => <RegistrationButons id={id} />}
           />
         }
       />
