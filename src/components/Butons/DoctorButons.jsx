@@ -8,7 +8,7 @@ function DoctorButons({ id, onUpdateStatus }) {
   });
 
   const handleClick = (newStatus, newColor) => {
-    console.log(`Paciente ${id} alterado para o Status ${newStatus}`);
+    //console.log(`Paciente ${id} alterado para o Status ${newStatus}`);
     onUpdateStatus(id, newStatus);
     setCor(newColor);
   };

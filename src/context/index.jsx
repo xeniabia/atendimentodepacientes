@@ -8,20 +8,20 @@ const LOCAL_STORAGE_KEY = "pacientesApp.pacientes";
 export function PatientesStatesProvider({ children }) {
  
  
-   const [pacientes, setPacientes] = useState(() => {
-     
-     const storedPacientes = localStorage.getItem(LOCAL_STORAGE_KEY);
-     if (storedPacientes) {
-       return JSON.parse(storedPacientes);
-     }
-    
-     return [];
-   });
+  const [pacientes, setPacientes] = useState(() => {
+    const storedPacientes = localStorage.getItem(LOCAL_STORAGE_KEY);
+    if (storedPacientes) {
+      return JSON.parse(storedPacientes);
+    }
+
+    return [];
+  });
+
    pacientes.sort((a, b) => {
      if (b.status !== a.status) return b.status - a.status;
      return b.level - a.level;
    });
-   console.log(pacientes)
+   //console.log(pacientes)
    useEffect(() => {
   
      localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(pacientes));

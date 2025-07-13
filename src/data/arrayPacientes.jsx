@@ -49,7 +49,7 @@ const ArrayPacientes = [
     status: 0,
   },
 ];
-console.log(ArrayPacientes)
+//console.log(ArrayPacientes)
 
 export {ArrayPacientes};
 
