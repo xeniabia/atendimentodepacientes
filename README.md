@@ -1,12 +1,55 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#  Atendimento de pacientes 
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## - Um sistema de triagem hospitalar  
+O sistema permitirá gerenciar o fluxo de
+pacientes, onde os mesmos são classificados de acordo com a prioridade de
+atendimento (baseada na gravidade de sua condição).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🔴 Vermelho nível grave
+- 🟡 Amarelo nível brando
+- 🟢 Verde  nível leve
+
+ - [Deploy](https://atendimentodepacientes.onrender.com/)
+
+
+## Referência
+Atividade proposta pelo projeto Capacita Brasil Residência em Tic, junto à Escola Atlântico Avanti e professor Eliakim Gama
+
+ - [PDF](https://drive.google.com/file/d/16lfgzZ3nFDGI2Yfpvto4s4vCX-ziEpI6/view?usp=sharing)
+ - [Capacita Brasil](https://capacitabrasil.ifce.edu.br/)
+ 
+
+
+## Bibliotecas e Ferramentas
+  
+| Biblioteca/Ferramenta | Versão | Descrição |
+|-----------------------|--------|-----------|
+| `bootstrap` | ^5.3.3 | Framework CSS para design responsivo |
+| `react` | ^18.3.1 | Biblioteca principal do React |
+| `react-bootstrap` | ^2.10.10 | Componentes Bootstrap para React |
+| `react-router-dom` | ^7.6.3 | Roteamento para aplicações React |
+| `html2pdf.js` | ^0.10.3 | Roteamento para aplicações React |
+| `react-dom` | ^19.1.1 | Integração do React com o DOM |
+| `react-toastify` | ^11.0.5 | Notificações toast para React |
+
+## Instalação e Deploy
+
+Instale  com:
+
+```bash
+  npm install 
+```
+
+Para fazer o deploy desse projeto rode
+
+```bash
+  npm  run dev
+```
+
+## Autores da equipe 5
+
+- [@iingridliveira](https://www.github.com/iingridliveira)
+- [@xeniabia](https://www.github.com/xeniabia)
