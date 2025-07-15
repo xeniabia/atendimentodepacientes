@@ -22,10 +22,29 @@ export function PatientesStatesProvider({ children }) {
      return b.level - a.level;
    });
    //console.log(pacientes)
-   useEffect(() => {
-  
-     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(pacientes));
-   }, [pacientes]); 
+ useEffect(() => {
+   // Salva no localStorage sempre que pacientes mudar
+   localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(pacientes));
+ }, [pacientes]);
+
+ useEffect(() => {
+   // Função para rederiza simutanemente 
+   const syncPacientes = (e) => {
+     if (e.key === LOCAL_STORAGE_KEY) {
+       const newPacientes = JSON.parse(e.newValue);
+       setPacientes(newPacientes);
+     }
+   };
+
+   window.addEventListener("storage", syncPacientes);
+
+   return () => {
+     window.removeEventListener("storage", syncPacientes);
+   };
+ }, []);
+
+
+   
  
    const updatePatientLevel = (id, newLevel) => {
      setPacientes((prev) =>
