@@ -1,17 +1,44 @@
-function CardTV() {
-  return (
-    <div className="align-items-center justify-content-center mt-2">
-      <div className="card  border-warning mb-3 " style={{ maxWidth: "18rem" }}>
-        <div className="card-header">Cabeçalho</div>
-        <div className="card-body ">
-          <h5 className="card-title">Título de Card Primary</h5>
-          <p className="card-text">
-            Um exemplo de texto rápido para construir o título do card e fazer
-            preencher o conteúdo do card.
-          </p>
+function CardTV({ header, patient, message }) {
+
+  const renderPatients = () => {
+    if (Array.isArray(patient)) {
+      return (
+        <div className="card mt-5">
+          <div className="card-header">
+            <h5 className="card-title fw-bold">Em Atendimento</h5>{" "}
+          </div>
+          {patient.length > 0 ? (
+            <ul className="list-group list-group-flush">
+              {patient.map((patientName, index) => (
+                <li className="list-group-item" key={index}>
+                  <h5 className="card-title">{patientName}</h5>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <div className="card-body">
+              <p className="card-text">{message}</p>
+            </div>
+          )}
+        </div>
+      );
+    } else if (patient) {
+    
+      return <div className="align-items-center justify-content-center mt-2">
+      <div className="card border-warning mb-3" style={{ maxWidth: "18rem" }}>
+        <div className="card-header">{header}</div>
+        <div className="card-body">
+          <p className="card-text ">{message}</p> <h2 className="card-title">{patient}</h2>
         </div>
       </div>
     </div>
-  );
+
+    }
+    
+    return null;
+  };
+
+  return <>{renderPatients()}</>;
 }
+
 export default CardTV;

@@ -27,6 +27,11 @@ function Nav (){
                     </NavLink>
                   </li>
                   <li className="nav-item">
+                    <NavLink to={"/tv"} className={"nav-link"}>
+                      TV
+                    </NavLink>
+                  </li>
+                  <li className="nav-item">
                     <NavLink to={"areamedica"} className={"nav-link"}>
                       Área Médica
                     </NavLink>
