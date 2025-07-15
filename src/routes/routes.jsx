@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Nav from "../components/nav/nav.jsx";
 import AreaMedica from "../pages/areamedica/areamedica.jsx";
 import Home from "../pages/home/home.jsx";
@@ -6,10 +6,11 @@ import Cadastro from "../pages/cadastro/cadastro.jsx";
 import { PatientesStatesProvider } from "../context/index.jsx";
 import TV from "../pages/Tv/index.jsx";
 import Footer from "../components/footer/index.jsx";
+import ToastNotifications from "../components/Alert/index.jsx";
 
 function RoutesNav() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <PatientesStatesProvider>
         <Nav />
         <div className="container-fluid d-flex flex-column min-vh-100 p-0 app-container">
@@ -21,10 +22,11 @@ function RoutesNav() {
               <Route path="cadastro" element={<Cadastro />} />
             </Routes>
           </div>
+          <ToastNotifications position="bottom-left" autoClose={5000} />
           <Footer />
         </div>
       </PatientesStatesProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

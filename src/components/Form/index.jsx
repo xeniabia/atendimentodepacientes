@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { usePatientesStates } from "../../context";
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 function Form() {
   const { setPacientes } = usePatientesStates();
@@ -22,7 +23,7 @@ function Form() {
     
     setName("");
     setReason("");
-    alert("paciente cadastrado")
+     toast.success("Paciente cadastra com sucesso!");
     
   }
   return (
