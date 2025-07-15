@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom"
 import { usePatientesStates } from "../../context/index.jsx";
+import Logo from "../../assets/img/LOGO.png";
 function Nav (){
     const { setPacientes } = usePatientesStates();
     return (
@@ -7,7 +8,11 @@ function Nav (){
         <header>
           <nav className="navbar navbar-expand-lg navbar-light bg-light border-bottom">
             <div className="container-fluid container ">
-              <a className="navbar-brand" href="#"></a>
+              <img
+                src={Logo}
+                alt="Logo"
+                style={{ width: "150px", height: "auto" }}
+              />
               <button
                 className="navbar-toggler"
                 type="button"
@@ -20,23 +25,28 @@ function Nav (){
                 <span className="navbar-toggler-icon"></span>
               </button>
               <div className="collapse navbar-collapse" id="navbarNav">
-                <ul className="navbar-nav ms-auto">
-                  <li className="nav-item">
+                <ul className="navbar-nav ms-auto fw-bolder">
+                  <li className="nav-item fw-bolder ">
                     <NavLink to={"/"} className={"nav-link"}>
                       Home
                     </NavLink>
                   </li>
-                  <li className="nav-item">
+                  <li className="nav-item fw-bolder">
+                    <NavLink to={"/tv"} className={"nav-link"}>
+                      TV
+                    </NavLink>
+                  </li>
+                  <li className="nav-item fw-bolder">
                     <NavLink to={"areamedica"} className={"nav-link"}>
                       Área Médica
                     </NavLink>
                   </li>
-                  <li className="nav-item">
+                  <li className="nav-item fw-bolder">
                     <NavLink to={"cadastro"} className={"nav-link"}>
                       Cadastro
                     </NavLink>
                   </li>
-                  <li className="nav-item">
+                  <li className="nav-item fw-bolder">
                     <button
                       className="btn btn-danger btn-sm rounded-circle ms-2"
                       title="Limpar dados"
