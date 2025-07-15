@@ -34,7 +34,7 @@ function AreaMedica() {
         tabTwo={
           <Table
             patientes={filterDoctor}
-            mensagem={"Nenhum paciente em para atendimento"}
+            mensagem={"Nenhum paciente  para atendimento"}
             Actions={(id) => (
               <DoctorButons id={id} onUpdateStatus={updatePatientStatus} />
             )}
