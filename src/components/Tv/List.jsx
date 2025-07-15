@@ -8,13 +8,13 @@ const pacientesFiltrados = patientes.filter(
 
 return (
   <div className="card mt-5">
-    <div className="card-header">
+    <div className="card-header ">
       <h5 className="card-title fw-bold">Em de espera </h5>
     </div>
     {pacientesFiltrados.length > 0 ? (
       <ul className="list-group list-group-flush">
         {pacientesFiltrados.map((patient) => (
-          <li className="list-group-item" key={patient.id}>
+          <li className="list-group-item " key={patient.id}>
             <h5>{patient.name}</h5>
             <p>
               Nível: <LevelDot patient={patient.level} /> Estado:

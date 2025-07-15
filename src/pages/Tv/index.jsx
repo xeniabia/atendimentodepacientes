@@ -25,29 +25,27 @@ function TV() {
 
   return (
     <section className="container align-items-center">
-      <div className="row align-items-center ">
-        <div className="col-8 px-6 text-center ">
+      <div className="row align-items-center">
+        <div className="col-12 col-md-8 px-2 text-center mb-4 mb-md-0">
           <CardTV
             header={"Paciente(s) em atendimento"}
-            patient={treatedPatients} 
-            message={
-              "Nenhum paciente em atendimento" 
-        
-            }
-          />
-          
-          <ListTV
-            patientes={filterDoctor}
-            mensagem={"Nenhum paciente em espera"}
+            patient={treatedPatients}
+            message={"Nenhum paciente em atendimento"}
           />
         </div>
-        <div className="col-3 text-center">
+        <div className="col-12 col-md-4 text-center py-2">
           <CardTV
             header={
               treatedPatients.length === 0 ? "Em chamado" : "Próximo paciente"
             }
             patient={nextPatient?.name}
             message={treatedPatients.length === 0 ? "chamando" : "proximo"}
+          />
+        </div>
+        <div className="col-12 text-center">
+          <ListTV
+            patientes={filterDoctor}
+            mensagem={"Nenhum paciente em espera"}
           />
         </div>
       </div>
