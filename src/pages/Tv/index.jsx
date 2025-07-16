@@ -24,7 +24,7 @@ function TV() {
   console.log("Pacientes em atendimento:", treatedPatients);
 
   return (
-    <section className="container align-items-center">
+    <section className="container align-items-center pt-3">
       <div className="row align-items-center">
         <div className="col-12 col-md-8 px-2 text-center mb-4 mb-md-0">
           <CardTV
@@ -33,7 +33,7 @@ function TV() {
             message={"Nenhum paciente em atendimento"}
           />
         </div>
-        <div className="col-12 col-md-4 text-center py-2">
+        <div className="col-12 col-md-4 text-center ps-5">
           <CardTV
             header={
               treatedPatients.length === 0 ? "Em chamado" : "Próximo paciente"

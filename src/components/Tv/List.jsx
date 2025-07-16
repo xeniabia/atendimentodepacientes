@@ -8,7 +8,7 @@ const pacientesFiltrados = patientes.filter(
 
 return (
   <div className="card mt-5">
-    <div className="card-header ">
+    <div className="card-header bg-success bg-opacity-50">
       <h5 className="card-title fw-bold">Em de espera </h5>
     </div>
     {pacientesFiltrados.length > 0 ? (

@@ -6,7 +6,7 @@ function Nav (){
     return (
       <>
         <header>
-          <nav className="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+          <nav className="navbar navbar-expand-lg navbar-light bg-success bg-opacity-50 border-bottom">
             <div className="container-fluid container ">
               <img
                 src={Logo}

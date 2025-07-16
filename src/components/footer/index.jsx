@@ -1,11 +1,11 @@
 function Footer() {
   return (
     <>
-      <section className="" style={{ backgroundColor: "rgba(0, 0, 0, 0.05)" }}>
-        <footer className="bg-body-tertiary">
+      <section className="bg-success bg-opacity-50 pt-3" >
+        <footer>
           <div className="d-flex flex-wrap  justify-content-center align-items-center gap-4">
             © 2025 Criadoras:
-            <h5>
+            <h6>
               <a
                 className="text-body"
                 target="_blank"
@@ -13,8 +13,8 @@ function Footer() {
               >
                 @iingridliveira
               </a>
-            </h5>
-            <h5>
+            </h6>
+            <h6>
               <a
                 className="text-body"
                 target="_blank"
@@ -22,8 +22,8 @@ function Footer() {
               >
                 @xeniabia
               </a>
-            </h5>
-            <h5>
+            </h6>
+            <h6>
               <a
                 className="text-body"
                 target="_blank"
@@ -31,7 +31,7 @@ function Footer() {
               >
                 Repositório Git hub
               </a>
-            </h5>
+            </h6>
           </div>
           <div className="text-center py-3">
             <p className="text-muted">

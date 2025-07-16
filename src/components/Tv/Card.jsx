@@ -4,7 +4,7 @@ function CardTV({ header, patient, message }) {
     if (Array.isArray(patient)) {
       return (
         <div className="card mt-5">
-          <div className="card-header">
+          <div className="card-header bg-success bg-opacity-50">
             <h5 className="card-title fw-bold">Em Atendimento</h5>{" "}
           </div>
           {patient.length > 0 ? (
@@ -30,7 +30,7 @@ function CardTV({ header, patient, message }) {
             className="card border-primary mb-3"
             style={{ maxWidth: "18rem" }}
           >
-            <div className="card-header">{header}</div>
+            <div className="card-header fw-bold bg-success bg-opacity-50">{header}</div>
             <div className="card-body">
               <p className="card-text ">{message}</p>{" "}
               <h2 className="card-title">{patient}</h2>

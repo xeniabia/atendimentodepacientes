@@ -5,7 +5,7 @@ function Table ({Actions, patientes, mensagem}) {
   
     return (
       <table className="table table-hover table-striped">
-        <thead>
+        <thead className="bg-success bg-opacity-50">
           <tr>
             <th scope="col">Nome</th>
             <th scope="col">Nível</th>
