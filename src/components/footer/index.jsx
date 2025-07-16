@@ -1,8 +1,8 @@
 function Footer() {
   return (
     <>
-      <section className="" style={{ backgroundColor: "rgba(0, 0, 0, 0.05)" }}>
-        <footer className="bg-body-tertiary">
+      <section className="bg-success bg-opacity-50" >
+        <footer>
           <div className="d-flex flex-wrap  justify-content-center align-items-center gap-4">
             © 2025 Criadoras:
             <h5>
