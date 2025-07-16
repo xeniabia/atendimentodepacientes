@@ -3,7 +3,7 @@ function Footer() {
     <>
       <section className="" style={{ backgroundColor: "rgba(0, 0, 0, 0.05)" }}>
         <footer className="bg-body-tertiary">
-          <div className="d-flex flex-row justify-content-center align-items-center gap-4">
+          <div className="d-flex flex-wrap  justify-content-center align-items-center gap-4">
             © 2025 Criadoras:
             <h5>
               <a
