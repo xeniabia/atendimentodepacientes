@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect} from "react";
+import { createContext, useContext, useState, useEffect, useMemo} from "react";
 //import { ArrayPacientes } from "../data/arrayPacientes";
 
 
@@ -27,7 +27,7 @@ export function PatientesStatesProvider({ children }) {
    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(pacientes));
  }, [pacientes]);
 
- useEffect(() => {
+ useMemo(() => {
    // Função para rederiza simutanemente 
    const syncPacientes = (e) => {
      if (e.key === LOCAL_STORAGE_KEY) {
