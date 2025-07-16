@@ -4,12 +4,12 @@ function Tabs ({title, subtitleUne, subtitleTwo, tabUne, tabTwo, TabThree, Tab, 
     return (
       <>
         <div className="container mt-4">
-          <h2 className="mb-4">{title}</h2>
+          <h2 className="mb-4 fw-bold text-success">{title}</h2>
 
           <ul className="nav nav-tabs mb-3" id="medicalAreaTabs" role="tablist">
             <li className="nav-item" role="presentation">
               <button
-                className="nav-link active"
+                className="nav-link active fw-bold text-success"
                 id="em-atendimento-tab"
                 data-bs-toggle="tab"
                 data-bs-target="#em-atendimento"
@@ -23,7 +23,7 @@ function Tabs ({title, subtitleUne, subtitleTwo, tabUne, tabTwo, TabThree, Tab, 
             </li>
             <li className="nav-item" role="presentation">
               <button
-                className="nav-link"
+                className="nav-link fw-bold text-success"
                 id="triagem-tab"
                 data-bs-toggle="tab"
                 data-bs-target="#triagem"
@@ -38,7 +38,7 @@ function Tabs ({title, subtitleUne, subtitleTwo, tabUne, tabTwo, TabThree, Tab, 
             {Tab == true ? (
               <li className="nav-item" role="presentation">
                 <button
-                  className="nav-link"
+                  className="nav-link fw-bold text-success"
                   id="atendidos-tab"
                   data-bs-toggle="tab"
                   data-bs-target="#atendidos"

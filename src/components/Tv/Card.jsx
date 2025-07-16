@@ -30,7 +30,7 @@ function CardTV({ header, patient, message }) {
             className="card border-primary mb-3"
             style={{ maxWidth: "18rem" }}
           >
-            <div className="card-header bg-success bg-opacity-50">{header}</div>
+            <div className="card-header fw-bold bg-success bg-opacity-50">{header}</div>
             <div className="card-body">
               <p className="card-text ">{message}</p>{" "}
               <h2 className="card-title">{patient}</h2>
